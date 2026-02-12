@@ -4,7 +4,7 @@ import { parseDecision } from './decision';
 import type { TreeRecord } from '../types';
 
 export const buildExportHtml = async (general: Record<string, string>, trees: TreeRecord[]) => {
-  const mark = (checked: boolean) => (checked ? '?' : '?');
+  const mark = (checked: boolean) => (checked ? '&#9745;' : '&#9744;');
   const management = (decisionValue: string) => {
     const base = parseDecision(decisionValue).base;
     return {
